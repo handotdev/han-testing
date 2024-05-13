@@ -1,4 +1,4 @@
-name: Run Snippets Script
+name: Create OpenAPI with Snippets
 
 on:
   push:
