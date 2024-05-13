@@ -8,6 +8,9 @@ on:
     branches:
       - main
 
+env:
+  FERN_API_KEY: ${{ secrets.FERN_API_KEY }}
+
 jobs:
   run-snippets:
     runs-on: ubuntu-latest
@@ -20,7 +23,7 @@ jobs:
         with:
           node-version: '20'
 
-      - name: create env file
+      - name: Create env file
         run: |
           touch .env
           echo FERN_API_KEY=${{ secrets.FERN_API_KEY }} >> .env
