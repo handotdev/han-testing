@@ -31,8 +31,10 @@ jobs:
       - name: Run snippets.js
         run: node snippets.js
 
-      - name: Upload OpenAPI JSON to Artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: openapi-json
-          path: openapi.json
+      - name: Commit OpenAPI Spec
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+          git add openapi.json
+          git commit -m "Update OpenAPI spec with new snippets"
+          git push
