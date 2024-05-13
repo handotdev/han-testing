@@ -30,3 +30,9 @@ jobs:
 
       - name: Run snippets.js
         run: node snippets.js
+
+      - name: Upload OpenAPI JSON to Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: openapi-json
+          path: openapi.json
