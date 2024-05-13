@@ -29,7 +29,7 @@ jobs:
           echo FERN_API_KEY=${{ secrets.FERN_API_KEY }} >> .env
 
       - name: Run snippets.js
-        run: node snippets.js
+        run: node .github/workflows/snippets.js
 
       - name: Commit OpenAPI Spec
         uses: EndBug/add-and-commit@v9
