@@ -20,8 +20,5 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install Dependencies
-        run: npm install
-
       - name: Run snippets.js
         run: node snippets.js
